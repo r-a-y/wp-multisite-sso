@@ -141,6 +141,7 @@ class WP_MultiSite_SSO {
 			$user_agent = wp_unslash( $_SERVER['HTTP_USER_AGENT'] );
 		}
 
+		$sso_objects = array();
 		foreach( array_keys( $network_sites ) as $blog_id ) {
 			// build the sso objects to send
 			$sso_objects[$blog_id] = array(
